@@ -1,0 +1,23 @@
+{
+  "name": "playground-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sakunyo/playground-typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sakunyo/playground-typescript/issues"
+  },
+  "homepage": "https://github.com/sakunyo/playground-typescript#readme",
+  "dependencies": {
+    "typescript": "^3.5.1"
+  }
+}
