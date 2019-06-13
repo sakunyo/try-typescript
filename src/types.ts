@@ -18,9 +18,28 @@ type FM = FilterMap<typeof o, Function>
 type FMKeys = keyof FM // 'a' | 'b' types
 
 type A = { a: never; b: string, c: null, d: number }
-type AMap<T> = { [K in keyof T]: T[K] }
-type AA<T> = AMap<T>[keyof T]
-type AAa = AA<A> // string | number | null
+type A1<T> = { [K in keyof T]: T[K] }
+type A2<T> = A1<T>[keyof T]
 
-type B<T> = T[keyof T]
-// TODO type B1 = B<string | number | never | { child: null }>
+type a1 = A2<A> // string | number | null
+
+type B = { a: string; b: number; c: never; d: { child: null }; }
+type B1<T> = T[keyof T] // 各key の型を返し never は Drop する
+type B2<T> = { [P in keyof T]: T[P] } // 各key ごとに map する
+type B3<T> = keyof T // key の配列を返す keys
+
+type b1 = B1<B> // string | number | { child: null; }
+type b2 = B2<B> // { a: string; b: number; c: never; d: { child: null; }; }
+type b3 = B3<B> // "a" | "b" | "c" | "d"
+
+type C1<T extends keyof any> = { [P in T]: P }
+type c1 = C1<'a' | 'b' | 'c'>
+
+
+// T, T1, T2
+// R ... Return
+// I ... Infer
+// K ... Key
+// P ... Property
+// U
+// S, U ... 2nd, 3rd from Java?
