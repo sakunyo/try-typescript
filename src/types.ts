@@ -32,9 +32,8 @@ type b1 = B1<B> // string | number | { child: null; }
 type b2 = B2<B> // { a: string; b: number; c: never; d: { child: null; }; }
 type b3 = B3<B> // "a" | "b" | "c" | "d"
 
-type C1<T extends keyof any> = { [P in T]: P }
-type c1 = C1<'a' | 'b' | 'c'>
-
+type C1<K extends keyof any, T> = { [P in K]: T }
+type c1 = C1<'a' | 'b' | 'c', string> // Record と同様 { a: string; b: string; c: string; }
 
 // T, T1, T2
 // R ... Return
