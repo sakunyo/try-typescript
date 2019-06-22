@@ -52,6 +52,8 @@ type b3b = keyof typeof obj
 type C1<T extends keyof any> = { [P in T]: P }
 type c1 = C1<'a' | 'b' | 'c'>
 
+type C2<K extends keyof any, T> = { [P in K]: T }
+type c2 = C2<'a' | 'b' | 'c', string> // Record と同様 { a: string; b: string; c: string; }
 
 // T, T1, T2
 // R ... Return
