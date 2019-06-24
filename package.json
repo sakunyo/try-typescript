@@ -12,11 +12,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sakunyo/playground-typescript/issues"
-  },
-  "homepage": "https://github.com/sakunyo/playground-typescript#readme",
   "dependencies": {
-    "typescript": "^3.5.1"
+    "typescript": "^3.5.2"
   }
 }
