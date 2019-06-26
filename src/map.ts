@@ -40,7 +40,7 @@ type a6b = A6<typeof obj, 'd'> // => obj にプロパティ d は存在しない
 
 
 type A7<T> = {
-    [P in Exclude<keyof T, 'a' | 'c'>]: P // [P in ...] に Key を返す関数を記述する
+    readonly [P in Exclude<keyof T, 'a' | 'c'>]: T[P] // [P in ...] に Key を返す関数を記述する
 }
 
-type a7a = A7<typeof obj> // => { b: "b"; }
+type a7a = A7<typeof obj> // => { readonly b: number; }

@@ -1,16 +1,16 @@
 {
   "name": "try-typescript",
   "version": "1.0.0",
-  "description": "",
+  "description": "型の遊び場",
   "scripts": {
     "tsc": "tsc"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sakunyo/playground-typescript.git"
+    "url": "git+https://github.com/sakunyo/try-typescript.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Shinya Sugo",
   "license": "ISC",
   "dependencies": {
     "typescript": "^3.5.2"
